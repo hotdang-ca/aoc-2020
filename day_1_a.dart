@@ -203,31 +203,12 @@ main() {
     1209,
   ];
 
-  int firstExpenseItem = 0;
-  int secondExpenseItem = 0;
-
   for (int firstEntry in expenseEntries) {
-    if (firstExpenseItem > 0 && secondExpenseItem > 0) {
-      break;
-    }
-
-    for (int secondEntry in expenseEntries) {
-      if (firstExpenseItem > 0 && secondExpenseItem > 0) {
-        break;
-      }
-
-      if (secondEntry == firstEntry) {
-        continue;
-      }
-
+    for (int secondEntry in expenseEntries) {      
       if (firstEntry + secondEntry == 2020) {
-        firstExpenseItem = firstEntry;
-        secondExpenseItem = secondEntry;
-
-        print('First entry: [$firstExpenseItem], second Entry: [$secondExpenseItem], product is [${firstExpenseItem * secondExpenseItem}]');
-        break;
+        print('First entry: [$firstEntry], second Entry: [$secondEntry], product is [${firstEntry * secondEntry}]');
+        return;
       }
     }
-
   }
 }

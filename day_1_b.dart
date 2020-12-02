@@ -203,32 +203,13 @@ main() {
     1209,
   ];
 
-  int firstExpenseItem = 0;
-  int secondExpenseItem = 0;
-  int thirdExpenseItem = 0;
-
   for (int firstEntry in expenseEntries) {
-    if (firstExpenseItem > 0 && secondExpenseItem > 0 && thirdExpenseItem > 0) {
-      break;
-    }
-
     for (int secondEntry in expenseEntries) {
-      if (firstExpenseItem > 0 && secondExpenseItem > 0 && thirdExpenseItem > 0) {
-        break;
-      }
-
       for (int thirdEntry in expenseEntries) {
-        if (firstExpenseItem > 0 && secondExpenseItem > 0 && thirdExpenseItem > 0) {
-          break;
-        }
 
         if (firstEntry + secondEntry + thirdEntry == 2020) {
-          firstExpenseItem = firstEntry;
-          secondExpenseItem = secondEntry;
-          thirdExpenseItem = thirdEntry;
-
-          print('First entry: [$firstExpenseItem],\nSecond Entry: [$secondExpenseItem],\nThird entry: [$thirdExpenseItem]nProduct is [${firstExpenseItem * secondExpenseItem * thirdExpenseItem}]');
-          break;
+          print('First entry: [$firstEntry],\nSecond Entry: [$secondEntry],\nThird entry: [$thirdEntry]\nProduct is [${firstEntry * secondEntry * thirdEntry}]');
+          return;
         }
       }
     }
