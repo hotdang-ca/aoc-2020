@@ -60,7 +60,7 @@ main() async {
   List<String> map;
 
   try {
-    map = await mapArray('day_3_input.txt');
+    map = await mapArray('input_cache/day_3_input.txt');
   } catch (e) {
     print('Could not open that file.');
   }

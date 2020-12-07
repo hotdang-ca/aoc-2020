@@ -126,7 +126,7 @@ Future<List<Passport>> mapPassportsFromFile(String inputPath) async {
 }
 
 void main() {
-  mapPassportsFromFile('day_4_input.txt').then((passports) {
+  mapPassportsFromFile('input_cache/day_4_input.txt').then((passports) {
     print('number of passports ${passports.length}');
 
     int validPassports = 0;

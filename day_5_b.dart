@@ -12,7 +12,7 @@ void main() async {
     claimedSeatIds.add(0);
   }
 
-  String rawStringData = await File('day_5_input.txt').readAsString();
+  String rawStringData = await File('input_cache/day_5_input.txt').readAsString();
   Iterable<String> lines = LineSplitter.split(rawStringData);
 
   for (String seatCode in lines) {

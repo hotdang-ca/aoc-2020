@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 void main() {
-  File('day_6_input.txt').readAsString().then((rawStringData) {
+  File('input_cache/day_6_input.txt').readAsString().then((rawStringData) {
     Iterable<String> lines = LineSplitter.split(rawStringData);
     int sumOfCounts = 0;
 
